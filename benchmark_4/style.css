@@ -1,0 +1,345 @@
+
+/* --------------------------
+ CSS RESET
+-------------------------- */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------
+ TABLE OF CONTENTS
+-------------------------- 
+1. Color Library
+2. General Styles
+3. Grid Styles
+4. Navigation and Buttons
+5. Header and Hero Styles
+6. Divider Styles
+7. About Styles
+8. Work Section Styles
+9. Contact Section
+10.Footer Styles
+*/
+
+/* --------------------------
+1. Color Library
+-------------------------- */
+:root {
+    --primary: hsl(0,0%,16%);
+    --primary-bg: hsl(0,0%,96%);
+    --primary-dk: hsl(0,0%,8%);
+    --accent: hsl(247,82%,56%);
+    --accent-lt: hsl(246,80%,90%);
+    --accent-dk: hsl(247, 82%, 36%);
+    --neutral-lt: hsl(0,0%,100%);
+    --neutral-dk: hsl(0,0%,53%);
+    --neutral-dkst: hsl(0,0%,0%);
+
+}
+
+/* --------------------------
+2. General Styles (element selectors)
+-------------------------- */
+body
+{
+background-color: var(--primary-bg);
+font: normal 400 16px/20px"Nunito Sans",Arial,sans-serif;
+}
+*:before,
+*:after{
+box-sizing: border-box;
+transition: .7s;
+}
+
+h1{
+font-size:38px;
+line-height:48px;
+}
+
+h3{
+font-size: 30px;
+line-height: 64px;
+margin-bottom: 16px;
+}
+
+a{
+transition: 5s;    
+}
+
+header nav ul {
+list-style-type: none;
+font-weight: 700;
+gap:1em;
+}
+
+ul li a {
+text-decoration: none;
+}
+
+p{
+margin-bottom: 16px;   
+}
+
+.uppercase{
+text-transform: uppercase;
+}
+
+
+/* --------------------------
+3. Grid Styles (positioning and aligment)
+-------------------------- */
+
+.container {
+width:1170px;
+max-width:90%;
+margin:auto;
+padding: 32px 0;
+}
+
+.flex {
+display: flex;
+}
+
+.jc-sb {
+justify-content: space-between;
+}
+
+.jc-sa{
+    justify-content: space-around;
+}
+
+.jc-fe{
+justify-content: flex-end;
+}
+
+.ai-center{
+align-items: center;
+}
+
+.col-1-2{
+width: 50vw;
+}
+
+/* --------------------------
+4. Navigation and buttons 
+-------------------------- */
+nav a{
+color: var(--neutral-dk);
+}
+
+nav a:hover{
+color: var(--accent);
+}
+
+.button {
+display: block;
+padding: 16px;
+min-width: 160px;
+max-width: 8%;
+background: var(--accent);
+border-radius: 30px !important;
+text-align: center;
+text-decoration: none;
+color: var(--neutral-lt);
+font-size: 20px;
+font-weight: 600;
+margin-top: 24px;
+}
+
+.button:hover{
+background-color: var(--accent-dk);
+cursor: pointer;
+}
+
+/* --------------------------
+5. Header and Hero 
+-------------------------- */
+.hdr-hero{
+background: var(--primary-bg) url(pictures/stack-of-magazines-pencils-in-gray-cup-6440.jpg) top/cover no-repeat;
+}
+
+header h1{
+font: 400 normal 28/24px "Anton", Arial, sans-serif;
+color: var(--accent);
+}
+
+.hero{
+height: 65vh;
+}
+
+.hero div{
+width: 33.33vw;
+}
+
+/* --------------------------
+6. Divider
+-------------------------- */
+.stats {
+background: var(--accent);
+padding: 50px 0;
+color: var(--accent);
+}
+
+.stats .flex {
+gap: 10px;
+}
+
+/* --------------------------
+7. About
+-------------------------- */
+.about {
+    position:relative;
+    
+}
+
+
+.about .container div:first-child{
+padding-right: 15%;
+}
+
+.about .container div:nth-of-type(2) {
+  background-image: url(pictures/blur-cellphone-close-up-device-196646_GS.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 400px; /* The text kept going under the image so I changed the code a little to make sure that did not happen.*/
+}
+
+/* --------------------------
+8. Work
+-------------------------- */
+.work .flex{
+width: 100vw;
+flex-wrap: wrap;
+margin-top: 32px;
+margin-bottom: 32px;
+}
+
+.work .flex a{
+display: inline-flex;
+}
+
+.work .contact{
+text-align: center;
+padding-top: 32;
+padding-bottom: 32;
+}
+
+.work div img{
+width: 25vw;
+}
+
+.work {
+background: var(--neutral-lt);
+}
+
+.work a{
+text-decoration: none;
+color: var(--neutral-dk);
+font-weight: 600;
+}
+
+.work a:hover{
+color: var(--accent)
+}
+
+.work a img:hover{
+filter: blur(5px);
+cursor: zoom-in;
+}
+
+/* --------------------------
+7. Contact
+-------------------------- */
+.contact{
+width:50%;
+}
+
+.contact form{
+padding-top: 8px;
+}
+
+.contact form input, textarea, form div{
+width: 100%;
+padding: 12px;
+margin-bottom: 12px;
+border: none;
+border-radius: 4px;
+font: 400 14px 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
+
+form div{
+padding:0;
+column-gap: 12px;
+margin-bottom: 0;
+}
+
+input.button{
+margin: auto;
+}
+
+/* --------------------------
+10. Footer 
+-------------------------- */
+footer{
+background: var(--neutral-dkst);
+color: var(--neutral-lt)
+}
+
+footer a{
+color: var(--accent-lt);
+}
+
+footer a:hover{
+color: var(--neutral-lt);
+}
+
+footer i{
+font-size: 15px;
+margin-left: 0;
+margin-right: 5px ;
+}
